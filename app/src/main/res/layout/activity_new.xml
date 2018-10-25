@@ -5,65 +5,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewActivity"
-    >
-
-    <!--<android.support.design.widget.TextInputLayout-->
-        <!--android:layout_width="7dp"-->
-        <!--android:layout_height="8dp">-->
-
-        <!--<android.support.design.widget.TextInputEditText-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-            <!--android:hint="hint" />-->
-    <!--</android.support.design.widget.TextInputLayout>-->
+    tools:context=".NewActivity">
 
     <EditText
-        android:id="@+id/editTextActivityName"
+        android:id="@+id/eventTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-
         android:hint="Event Title"
         android:inputType="textPersonName"
         android:text=""
         />
 
-    <EditText
-        android:id="@+id/editTextStartDate"
+    <TextView
+        android:id="@+id/startDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Start Date"
         android:inputType="date" />
 
-    <EditText
-        android:id="@+id/editTextStartTime"
+    <TextView
+        android:id="@+id/startTime"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:ems="10"
-        android:hint="Start Time"
-        android:inputType="time" />
+        android:hint="Start Time" />
 
-    <EditText
-        android:id="@+id/editTextEndDate"
+
+    <TextView
+        android:id="@+id/endDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="End Date"
         android:inputType="date" />
 
-    <EditText
-        android:id="@+id/editTextEndTime"
+    <TextView
+        android:id="@+id/endTime"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
-        android:hint="End Time"
-        android:inputType="time" />
+        android:hint="End Time" />
 
     <EditText
-        android:id="@+id/editTextAddress"
+        android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -71,13 +57,14 @@
         android:inputType="textPostalAddress" />
 
     <EditText
-        android:id="@+id/editTextNotes"
+        android:id="@+id/notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Notes"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine"
         android:text="" />
+
 
     <Button
         android:id="@+id/buttonSend"
