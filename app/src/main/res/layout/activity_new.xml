@@ -1,60 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewActivity">
 
-    <EditText
-        android:id="@+id/eventTitle"
+
+
+
+
+
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/eventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Event Title"
+            android:inputType="textPersonName"
+            android:textSize="25sp" />
+
+    </TableRow>
+
+
+    <TextView
+        android:id="@+id/blank1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Event Title"
-        android:inputType="textPersonName"
-        android:text=""
-        />
+        android:hint=""
+        android:inputType=""
+        android:textSize="25sp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/blank"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:inputType=""
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/startDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Start Date"
+            android:inputType="date"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Start Time"
+            android:textSize="25sp" />
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/endDate"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="End Date"
+            android:inputType="date"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="End Time"
+            android:textSize="25sp" />
+
+    </TableRow>
 
     <TextView
-        android:id="@+id/startDate"
+        android:id="@+id/blank2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Start Date"
-        android:inputType="date" />
+        android:hint=""
+        android:inputType=""
+        android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/startTime"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:hint="Start Time" />
-
-
-    <TextView
-        android:id="@+id/endDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="End Date"
-        android:inputType="date" />
-
-    <TextView
-        android:id="@+id/endTime"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="End Time" />
-
-    <EditText
         android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Address"
-        android:inputType="textPostalAddress" />
+        android:text="Address"
+        android:textSize="25sp" />
+
+    <!--<EditText-->
+    <!--android:id="@+id/address"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="25sp"-->
+    <!--android:ems="10"-->
+    <!--android:hint="Address"-->
+    <!--android:inputType="textMultiLine" />-->
 
     <EditText
         android:id="@+id/notes"
@@ -63,18 +123,12 @@
         android:ems="10"
         android:hint="Notes"
         android:inputType="textMultiLine"
-        android:text="" />
-
-
-    <TextView
-        android:id="@+id/tvPlace"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text=""
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/buttonSend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
-</LinearLayout>
+        android:text="建立活動" />
+</TableLayout>

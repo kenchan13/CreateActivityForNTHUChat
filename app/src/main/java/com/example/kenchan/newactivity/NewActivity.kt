@@ -36,7 +36,7 @@ class NewActivity : AppCompatActivity() {
     lateinit var endDateUI: TextView
     lateinit var startTimeUI: TextView
     lateinit var endTimeUI: TextView
-    lateinit var addressUI: EditText
+    lateinit var addressUI: TextView
     lateinit var notesUI: EditText
     lateinit var buttonSendUI: Button
 
@@ -113,7 +113,7 @@ class NewActivity : AppCompatActivity() {
         buildGoogleApiClient()
 
         //OnClickListener
-        tvPlace.setOnClickListener(View.OnClickListener {
+        addressUI.setOnClickListener(View.OnClickListener {
             if (!checkGPSEnabled()) {
                 return@OnClickListener
             }
@@ -131,12 +131,10 @@ class NewActivity : AppCompatActivity() {
         val endTime = endTimeUI.text.toString()
         val notes = notesUI.text.toString()
         val address = notesUI.text.toString()
-
-
+        val creater = "ken"
 
 
         if (name.isEmpty()) {
-            TODO(" Empty Function")
             eventTitleUI.error = "Empty"
             return
         }
@@ -164,7 +162,7 @@ class NewActivity : AppCompatActivity() {
         if (requestCode == PLACE_PICKER_REQUEST && resultCode == Activity.RESULT_OK) {
             val place = PlacePicker.getPlace(data, this)
             val toastMsg = String.format("Place: %s", place.name)
-            tvPlace.text = place!!.name.toString().plus("\n".plus(place!!.address).plus("\n".plus(place!!.phoneNumber)))
+            addressUI.text = place!!.name.toString().plus("\n".plus(place!!.address).plus("\n".plus(place!!.phoneNumber)))
             Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show()
         }
     }
