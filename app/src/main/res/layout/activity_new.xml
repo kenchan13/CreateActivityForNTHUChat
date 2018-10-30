@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,128 +7,267 @@
     tools:context=".NewActivity">
 
 
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/eventTitle"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="Event Title"-->
+            <!--android:inputType="textPersonName"-->
+            <!--android:textSize="25sp" />-->
+
+    <!--</TableRow>-->
 
 
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/blank1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:hint=""&ndash;&gt;-->
+        <!--&lt;!&ndash;android:inputType=""&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="25sp" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<TableRow&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/blank"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="94dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:hint=""&ndash;&gt;-->
+            <!--&lt;!&ndash;android:inputType=""&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="25sp" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/startDate"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:ems="10"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:hint="Start Date"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:inputType="date"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="25sp" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/startTime"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:ems="10"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:hint="Start Time"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="25sp" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;</TableRow>&ndash;&gt;-->
 
 
+    <!--&lt;!&ndash;<TableRow&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
 
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/endDate"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="155dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:ems="10"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:hint="End Date"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:inputType="date"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="25sp" />&ndash;&gt;-->
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/endTime"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:ems="10"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:hint="End Time"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="25sp" />&ndash;&gt;-->
 
-        <EditText
-            android:id="@+id/eventTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Event Title"
-            android:inputType="textPersonName"
-            android:textSize="25sp" />
+    <!--&lt;!&ndash;</TableRow>&ndash;&gt;-->
 
-    </TableRow>
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/blank2"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:hint=""&ndash;&gt;-->
+        <!--&lt;!&ndash;android:inputType=""&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="25sp" />&ndash;&gt;-->
 
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/address"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Address"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="25sp" />&ndash;&gt;-->
 
-    <TextView
-        android:id="@+id/blank1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:inputType=""
-        android:textSize="25sp" />
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/blank"
-            android:layout_width="94dp"
-            android:layout_height="wrap_content"
-            android:hint=""
-            android:inputType=""
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/startDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Start Date"
-            android:inputType="date"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/startTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Start Time"
-            android:textSize="25sp" />
-
-    </TableRow>
-
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/endDate"
-            android:layout_width="155dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="End Date"
-            android:inputType="date"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/endTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="End Time"
-            android:textSize="25sp" />
-
-    </TableRow>
-
-    <TextView
-        android:id="@+id/blank2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:inputType=""
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Address"
-        android:textSize="25sp" />
+    <!--&lt;!&ndash;&lt;!&ndash;<EditText&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:id="@+id/address"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:textSize="25sp"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:ems="10"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:hint="Address"&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;android:inputType="textMultiLine" />&ndash;&gt;&ndash;&gt;-->
 
     <!--<EditText-->
-    <!--android:id="@+id/address"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:textSize="25sp"-->
-    <!--android:ems="10"-->
-    <!--android:hint="Address"-->
-    <!--android:inputType="textMultiLine" />-->
+        <!--android:id="@+id/notes"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Notes"-->
+        <!--android:inputType="textMultiLine"-->
+        <!--android:text=""-->
+        <!--android:textSize="25sp" />-->
 
-    <EditText
-        android:id="@+id/notes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Notes"
-        android:inputType="textMultiLine"
-        android:text=""
-        android:textSize="25sp" />
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/buttonSend"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="建立活動" />&ndash;&gt;-->
 
-    <Button
-        android:id="@+id/buttonSend"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="建立活動" />
-</TableLayout>
+    <!---->
+
+<!--</RelativeLayout>-->
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--tools:context=".NewActivity">-->
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="50dp"
+            android:shrinkColumns="*"  android:stretchColumns="*" android:background="#ffffff">
+
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/eventTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:padding="18dip"
+                    android:background="@null"
+                    android:text="Activity Name"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/startDate"
+                    android:layout_width="251dp"
+                    android:layout_weight="2"
+                    android:gravity="start"
+                    android:padding="20dip"
+                    android:text="Start Date"
+                    android:textSize="18dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/startTime"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:padding="20dip"
+                    android:text="Start Time"
+                    android:textSize="18dp"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/endDate"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="start"
+                    android:padding="20dip"
+                    android:text="End Date"
+                    android:textSize="18dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/endTime"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:padding="20dip"
+                    android:text="End Time"
+                    android:textSize="18dp"
+                    android:textColor="#000000" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:padding="18dip"
+                    android:text="Address"
+                    android:textColor="#000"
+                    android:inputType="textMultiLine"
+                    android:background="@null"
+                    android:textSize="18dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:padding="18dip"
+                    android:text="Notes"
+                    android:textColor="#000"
+                    android:inputType="textMultiLine"
+                    android:background="@null"
+                    android:textSize="18dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="40dp"
+                android:paddingRight="50dp"
+                >
+
+                <Button
+                    android:id="@+id/buttonSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:text="Button" />
+            </TableRow>
+
+        </TableLayout>
+
+    </RelativeLayout>
