@@ -11,5 +11,7 @@ class Schedule(
         val endDate: String,
         val endTime: String,
         val address: String,
-        val notes: String
+        val notes: String,
+        val createrID: String,
+        val type: String
 )
