@@ -130,7 +130,7 @@ class NewActivity : AppCompatActivity() {
         val endDate = endDateUI.text.toString()
         val endTime = endTimeUI.text.toString()
         val notes = notesUI.text.toString()
-        val address = notesUI.text.toString()
+        val address = addressUI.text.toString()
         val creater = "ken"
 
 
