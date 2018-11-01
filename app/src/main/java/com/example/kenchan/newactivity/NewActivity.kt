@@ -9,6 +9,7 @@ import android.location.LocationManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
+import android.support.v7.app.ActionBar
 import android.support.v7.app.AlertDialog
 import android.view.View
 import android.widget.*
@@ -21,6 +22,11 @@ import java.text.SimpleDateFormat
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.location.places.Places
 import com.google.android.gms.location.places.ui.PlacePicker
+import android.widget.ArrayAdapter
+import android.widget.AdapterView
+import android.widget.Toast
+import android.widget.Toast.LENGTH_LONG
+import android.widget.Toast.LENGTH_SHORT
 import java.util.*
 
 
@@ -30,6 +36,7 @@ class NewActivity : AppCompatActivity() {
 
     var database = FirebaseDatabase.getInstance()
     var myRef = database.getReference("message")
+    var selectedType : String? = null
 
     lateinit var eventTitleUI: EditText
     lateinit var startDateUI: TextView
@@ -39,7 +46,7 @@ class NewActivity : AppCompatActivity() {
     lateinit var addressUI: TextView
     lateinit var notesUI: EditText
     lateinit var buttonSendUI: Button
-
+    lateinit var typeUI: Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,11 +54,12 @@ class NewActivity : AppCompatActivity() {
 
         eventTitleUI = findViewById(R.id.eventTitle)
         startDateUI = findViewById(R.id.startDate)
-        startTimeUI  = findViewById(R.id.startTime)
+        startTimeUI = findViewById(R.id.startTime)
         endDateUI = findViewById(R.id.endDate)
         endTimeUI = findViewById(R.id.endTime)
         addressUI = findViewById(R.id.address)
         notesUI = findViewById(R.id.notes)
+        typeUI = findViewById(R.id.type)
 
         // Call Calendar
         startDateUI.setOnClickListener {
@@ -60,8 +68,8 @@ class NewActivity : AppCompatActivity() {
             val month = c.get(Calendar.MONTH)
             val day = c.get(Calendar.DAY_OF_MONTH)
 
-            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{view, mYear, mMonth, mDate ->
-                startDateUI.setText(""+ mDate + "/" + mMonth + "/" + mYear)
+            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, mYear, mMonth, mDate ->
+                startDateUI.setText("" + mDate + "/" + mMonth + "/" + mYear)
             }, year, month, day)
             dpd.show()
         }
@@ -73,8 +81,8 @@ class NewActivity : AppCompatActivity() {
             val month = c.get(Calendar.MONTH)
             val day = c.get(Calendar.DAY_OF_MONTH)
 
-            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{view, mYear, mMonth, mDate ->
-                endDateUI.setText(""+ mDate + "/" + mMonth + "/" + mYear)
+            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, mYear, mMonth, mDate ->
+                endDateUI.setText("" + mDate + "/" + mMonth + "/" + mYear)
             }, year, month, day)
             dpd.show()
         }
@@ -82,7 +90,7 @@ class NewActivity : AppCompatActivity() {
         // Call TimePicker
         startTimeUI.setOnClickListener {
             val cal = Calendar.getInstance()
-            val timeSetListenner = TimePickerDialog.OnTimeSetListener{ timePicker, hour, minute ->
+            val timeSetListenner = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
                 cal.set(Calendar.HOUR_OF_DAY, hour)
                 cal.set(Calendar.MINUTE, minute)
                 //set time to textview
@@ -95,7 +103,7 @@ class NewActivity : AppCompatActivity() {
 
         endTimeUI.setOnClickListener {
             val cal = Calendar.getInstance()
-            val timeSetListenner = TimePickerDialog.OnTimeSetListener{ timePicker, hour, minute ->
+            val timeSetListenner = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
                 cal.set(Calendar.HOUR_OF_DAY, hour)
                 cal.set(Calendar.MINUTE, minute)
                 //set time to textview
@@ -121,6 +129,31 @@ class NewActivity : AppCompatActivity() {
             startActivityForResult(builder.build(this), PLACE_PICKER_REQUEST)
         })
 
+
+        val scheduleType = arrayOf("啓發", "學習", "娛樂", "社交")
+        typeUI.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, scheduleType)
+
+        // Initializing an ArrayAdapter
+        var adapter = ArrayAdapter(
+                this, // Context
+                android.R.layout.simple_spinner_item, // Layout
+                scheduleType // Array
+        )
+
+        //item selected listener for spinner
+        typeUI.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                Toast.makeText(this@NewActivity, scheduleType[p2], LENGTH_SHORT).show()
+                selectedType = scheduleType[p2]
+            }
+
+
+
+        }
     }
 
     fun sendSchedule() {
@@ -131,8 +164,8 @@ class NewActivity : AppCompatActivity() {
         val endTime = endTimeUI.text.toString()
         val notes = notesUI.text.toString()
         val address = addressUI.text.toString()
-        val creater = "ken"
-
+        val createrID: String = "ken"
+        var type = selectedType.toString()
 
         if (name.isEmpty()) {
             eventTitleUI.error = "Empty"
@@ -142,12 +175,12 @@ class NewActivity : AppCompatActivity() {
         val ref = FirebaseDatabase.getInstance().getReference("Schedule")
         val scheduleId = ref.push().key.toString()
 
-        val schedule = Schedule(name, startDate, startTime, endDate, endTime, address, notes)
+        val schedule = Schedule(name = name, startDate = startDate, startTime = startTime,
+                endDate = endTime, endTime = endTime, address = address, notes = notes, createrID = createrID, type = type)
 
         ref.child(scheduleId).setValue(schedule).addOnCompleteListener() {
             Toast.makeText(applicationContext, "Schedule Add Success!", Toast.LENGTH_LONG).show()
         }
-
     }
 
     private fun buildGoogleApiClient() {
@@ -189,4 +222,6 @@ class NewActivity : AppCompatActivity() {
                 .setNegativeButton("Cancel") { paramDialogInterface, paramInt -> }
         dialog.show()
     }
+
+
 }
